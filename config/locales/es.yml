@@ -1,0 +1,7 @@
+es:
+  decidim:
+    proposals:
+      proposals:
+        vote_button: 
+          out_of_scope: Esta propuesta no pertenece a tu distrito
+
