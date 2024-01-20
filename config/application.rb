@@ -33,5 +33,7 @@ module DecidimMonterrey
     config.i18n.default_locale = :es
     # Expand locales path
     config.i18n.load_path += Dir[Rails.root.join("config/locales/**/*.yml").to_s]
+    config.action_dispatch.cookies_same_site_protection = :strict
   end
 end
+
