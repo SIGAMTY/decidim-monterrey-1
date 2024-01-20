@@ -15,7 +15,7 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs
 RUN apt-get clean
 RUN npm install -g yarn
-RUN gem install bundler
+RUN gem install bundler -v 2.4.22
 
 WORKDIR /decidim
 COPY Gemfile .
