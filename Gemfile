@@ -11,7 +11,7 @@ gem "decidim", DECIDIM_VERSION
 gem "decidim-ine", path: "decidim-module-ine"
 gem "omniauth-idmty", path: "omniauth-idmty"
 gem "google-cloud-storage", "~> 1.11", require: false
-
+gem "net-http"
 
 gem "bootsnap", "~> 1.3"
 gem "puma", ">= 5.0.0"
