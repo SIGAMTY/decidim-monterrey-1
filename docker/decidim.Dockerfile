@@ -4,7 +4,7 @@ LABEL org.opencontainers.image.source="https://github.com/codeandomexico/decidim
 
 ARG FORCE_SSL
 ARG RAILS_ENV
-ARG MAILER_SENDER
+# ARG MAILER_SENDER
 ARG SECRET_KEY_BASE
 ENV SHELL /bin/bash
 
