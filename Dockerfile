@@ -29,5 +29,5 @@ COPY omniauth-idmty/lib/omniauth/omniauth-idmty/version.rb ./omniauth-idmty/lib/
 RUN bundle check || bundle install --jobs=4
 COPY . .
 RUN yarn install
-RUN bundle exec rails webpacker:compile --trace
-RUN chmod +x /decidim/docker/entrypoints/decidim.sh
+RUN bundle exec rails webpacker:compile
+RUN chmod +x /decidim/entrypoint.sh
