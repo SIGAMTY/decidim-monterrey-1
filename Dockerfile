@@ -1,12 +1,13 @@
 FROM ruby:2.7.5
 
-LABEL org.opencontainers.image.source="https://github.com/codeandomexico/decidim-monterrey"
+# LABEL org.opencontainers.image.source="https://github.com/codeandomexico/decidim-monterrey"
 
 ARG FORCE_SSL
 ARG RAILS_ENV
 ARG MAILER_SENDER
 ARG SECRET_KEY_BASE
 ENV SHELL /bin/bash
+ENV MAILER_SENDER 'Decidimos Monterrey <decidimos@monterrey.gob.mx>'
 
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y git imagemagick wget
