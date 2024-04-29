@@ -15,7 +15,8 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs
 RUN apt-get clean
 RUN npm install -g yarn
-RUN gem install bundler
+# RUN gem install bundler
+RUN gem install bundler -v 2.4.22
 
 WORKDIR /decidim
 COPY Gemfile .
@@ -27,5 +28,5 @@ COPY omniauth-idmty/lib/omniauth/omniauth-idmty/version.rb ./omniauth-idmty/lib/
 RUN bundle check || bundle install --jobs=4
 COPY . .
 RUN yarn install
-RUN bundle exec rails webpacker:compile
+RUN bundle exec rails webpacker:compile --trace
 RUN chmod +x /decidim/docker/entrypoints/decidim.sh
